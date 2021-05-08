@@ -29,5 +29,9 @@ public class Car {
     @JoinColumn(name = "body_type_id")
     BodyType bodyType = null;
 
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinColumn(name = "photo_id")
+    Photo photo = null;
+
     Boolean isSaled = null;
 }
